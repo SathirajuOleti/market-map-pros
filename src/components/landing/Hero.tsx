@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, BarChart3, Wallet, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroBg from "@/assets/hero-bg.png";
 
 export const Hero = () => {
   return (
     <section className="relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-70 dark:opacity-25 pointer-events-none"
+        style={{ backgroundImage: `url(${heroBg})` }}
+        aria-hidden
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/55 to-background pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-hero pointer-events-none" />
       <div className="container relative grid lg:grid-cols-2 gap-12 lg:gap-8 items-center py-20 lg:py-28">
         <div className="space-y-7 animate-fade-in">

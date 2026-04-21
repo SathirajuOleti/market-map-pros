@@ -1,11 +1,13 @@
-import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/stratifyr-logo.jpg";
 
 export const Logo = ({ className = "" }: { className?: string }) => (
-  <Link to="/" className={`inline-flex items-center gap-2 font-display font-bold text-lg ${className}`}>
-    <span className="grid h-8 w-8 place-items-center rounded-xl bg-gradient-primary shadow-soft">
-      <Sparkles className="h-4 w-4 text-primary-foreground" />
-    </span>
+  <Link to="/" className={`inline-flex items-center gap-2.5 font-display font-bold text-lg ${className}`}>
+    <img
+      src={logo}
+      alt="Stratifyr logo"
+      className="h-9 w-9 rounded-xl object-cover shadow-soft"
+    />
     <span className="tracking-tight">Stratifyr</span>
   </Link>
 );
